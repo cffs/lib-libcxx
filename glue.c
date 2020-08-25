@@ -19,6 +19,7 @@
  *      59 Temple Place - Suite 330, Boston, MA 02111-1307, USA
  */
 
+#ifndef _LIBCPP_HAS_MUSL_LIBC
 #include <nl_types.h>
 
 int catclose(nl_catd catalog)
@@ -36,5 +37,6 @@ char *catgets(nl_catd catalog, int set_number, int message_number,
 {
 	return 0;
 }
+#endif // _LIBCPP_HAS_MUSL_LIBC
 
 void *__dso_handle = (void *) &__dso_handle;
