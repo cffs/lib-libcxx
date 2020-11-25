@@ -27,7 +27,7 @@ index ed9bf03..c5b74fd 100644
      }
  };
  
-+#if defined(_LIBCPP_HAS_THREAD_API_PTHREAD)
++#if defined(_LIBCPP_HAS_THREAD_API_PTHREAD) && !defined(_LIBCPP_HAS_MUSL_LIBC)
 +template <>
 +struct _LIBCPP_TEMPLATE_VIS hash<pthread_t>
 +    : public __scalar_hash<size_t>
